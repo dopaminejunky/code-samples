@@ -29,6 +29,6 @@ SetWithCounter: A templated Set that can track and print ranked values. Template
 
 ReversePrint: Given input, print in the reverse order: Implemented doubly linked data structure, iterative and recursive reverse print solutions, deep copy constructor.
 
-BSTtemplate: A generic binary search tree with preorder, inorder, and postorder outputs. Recursion, templates, pointers, implementing in headers
+BSTtemplate: A generic binary search tree with preorder, inorder, and postorder outputs. Added breadth first search. Recursion, templates, pointers, implementing in headers
 
 
