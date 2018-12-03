@@ -8,6 +8,7 @@
 #ifndef TREE_H_
 #define TREE_H_
 #include <iostream>
+#include <queue>
 using namespace std;
 
 // apparently necessary for proper compilation
@@ -26,6 +27,7 @@ class Tree {
     void preorder() { preorder(root); }
     void inorder() { inorder(root); }
     void postorder() { postorder(root); }
+    bool bfs(T data) { bfs(root, data); }
 
     // let's try a private internal class
     private:
@@ -82,6 +84,35 @@ class Tree {
             node->count++;
         }
         return node;
+    }
+
+    bool bfs(Node* node, T data) {
+        if (node == nullptr) {
+            return false;
+        }
+        // create queue
+        queue<Node*> q;
+        // push starting node onto queue
+        q.push(node);
+        // while the queue isn't empty
+        while (!q.empty()) {
+            // pop, starting at the front
+            Node* current = q.front();
+            q.pop();
+            // if equal to search term, return true
+            if (current->data == data) {
+                return true;
+                // else look to the left and right, add to queue
+            } else {
+                if (current->left != nullptr) {
+                    q.push(current->left);
+                }
+                if (current->right != nullptr) {
+                    q.push(current->right);
+                }
+            }
+        }
+        return false;
     }
 
 

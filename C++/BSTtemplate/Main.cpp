@@ -15,6 +15,11 @@ int main(int argc, char const *argv[])
     leftUnbalanced->add(3);
     leftUnbalanced->add(2);
     leftUnbalanced->add(1);
+    cout << "BFS" << endl;
+    cout << "7? ";  
+    cout << leftUnbalanced->bfs(7) << endl;
+    cout << "200? ";
+    cout << leftUnbalanced->bfs(200) << endl;
     cout << "INORDER" << endl;
     leftUnbalanced->inorder();
     cout << endl;
