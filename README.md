@@ -31,4 +31,5 @@ ReversePrint: Given input, print in the reverse order: Implemented doubly linked
 
 BSTtemplate: A generic binary search tree with preorder, inorder, and postorder outputs. Added breadth first search. Recursion, templates, pointers, implementing in headers
 
+BSTmanualMemoryMgmt: Learned a lot on this one. A binary search tree that focused on recursive algorithms and manually handling memory. Passes valgrind with 0 bytes leaked! I had to make my code fit with a main written by my professor and use some prescribed method headers. 
 
